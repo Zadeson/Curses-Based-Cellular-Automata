@@ -118,8 +118,8 @@ while stdscr.getch() != ord('q'):
         familydict["{0}".format(families[i])] = 0
     deathrate = 0
     total = 1
-    for x in range(2, (sx-1)):
-        for y in range(1, (sy-1)):
+    for x in range(2, (sx-2)):
+        for y in range(2, (sy-2)):
             current_character = chr(cellscr.inch(y, x))
             
             neighbors = 0
@@ -249,7 +249,6 @@ curses.endwin()
 print("Generations passed: " + str(generation))
 
 
-
-
+# Good chars for families: █ ░
 
 
