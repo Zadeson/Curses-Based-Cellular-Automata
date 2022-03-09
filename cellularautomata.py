@@ -5,55 +5,53 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 import numpy as np
 
+# Resize the Windows console #
 os.system("mode con cols=93 lines=45")
 
-infamilies1 = input('Please enter every character you would like in the gene pool.\n')
+# User  input at startup #
+infamilies1 = input('Please enter every character you would like in the gene pool.\n') # Good chars for families: █ ░
 choice = input('would you like to seperate each family? y/n \n')
 infamilies = "".join(set(infamilies1))
 infamilies = infamilies.replace(" ", "")
-stdscr = curses.initscr()
 
+# Creates the base Curses window and assign its attributes #
+stdscr = curses.initscr()
 curses.noecho()
 curses.cbreak()
 stdscr.keypad(True)
 curses.mousemask(1)
-
 curs_set(0)
 stdscr.clear()
-
 rows, cols = stdscr.getmaxyx()
-
 stdscr.nodelay(1)
-
 sy,sx = stdscr.getmaxyx()
 
-print(sy,sx)
-
+# Creates the families list which stores every gene in the pool #
 families = []
 
 for i in range(len(infamilies)):
     families.append(infamilies[i])
 
+# Creates the infoscreen and cell screen windows #
 begin_x = 0
 begin_y = 0
 height = len(families) + 4
 width = sx
-
 infoscreen = curses.newwin(height,width,begin_y,begin_x)
-
 infoscreen.border()
 
 begin_x = 0
 begin_y = len(families) + 4
 height = sy - (len(families) + 4)
 width = sx
-
 cellscr = curses.newwin(height, width, begin_y, begin_x)
-
 cellscr.border()
 
+# This equation is necessary to evenly distribute cells across the screen,
+# if the user decides to split each family.
 seperation = ([sx // (len(families)+1) + (1 if x < sx % len(families) else 0)  for x in range (len(families))])
 
+# Distributes cells based on user input.
 if choice.lower().strip() == 'y':
     for i in range(len(families)):
         for x in range((seperation[i]*(i+1))-10,(seperation[i]*(i+1))):
@@ -72,18 +70,11 @@ else:
                 cellscr.addstr(y, x, random.choice(families))
             else:
                 pass
+
 stdscr.refresh()
 
-"""
-stdscr.addstr(5, 15, '0')
-stdscr.addstr(6, 15, '0')
-stdscr.addstr(4, 15, '0')
-stdscr.addstr(4, 16, '0')
-stdscr.addstr(5, 14, '0')
-stdscr.refresh()
-"""
-  
-#(70, 190) - bottom right corner
+# Function used to determine the most frequent item in a list, necessary
+# for new cells being created to know which family it belongs to.
 def most_frequent(List):
     counter = 0
     num = List[0]
@@ -96,159 +87,96 @@ def most_frequent(List):
  
     return num
 
+# Function used to check the eight tiles in each cell's neighborhood.
+def check(y, x):
+    global neighbors
+    direction = chr(cellscr.inch(y, x))
+    if direction in families:
+        neighbors = neighbors + 1
+        surrounding.append(direction)
+        for i in range(len(families)):
+            if direction == families[i]:
+                familydict["{}".format(families[i])] += 1
 
-
+# Variables and lists needed to create the graph at the end of the program.
 generation = 0
 Gen = [0]
-
 familydict = {}
-
 percentdict = {}
-
 axisdict = {}
 
 for i in range(len(families)):
     axisdict["{0}axis".format(families[i])] = [0]
 
+# This loop contains the main cellular automata section of the code, and
+# quits when the user presses the 'q' key.
 while stdscr.getch() != ord('q'):
     sy,sx = cellscr.getmaxyx()
     cellscr.border()
     infoscreen.border()
-    for i in range(len(families)):
+    for i in range(len(families)): # assigns each family a value of 0 at the end of a generation
         familydict["{0}".format(families[i])] = 0
     deathrate = 0
     total = 1
-    for x in range(2, (sx-2)):
-        for y in range(2, (sy-2)):
+    for x in range(2, (sx-2)): # iterates over the maximum x,y
+        for y in range(2, (sy-2)): # values minus four for each axis.
             current_character = chr(cellscr.inch(y, x))
-            
             neighbors = 0
             surrounding = []
-            
-            above = chr(cellscr.inch(y + 1, x))
-            if above in families:
-                neighbors = neighbors + 1
-                surrounding.append(above)
-                for i in range(len(families)):
-                    if above == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            below = chr(cellscr.inch(y - 1, x))
-            if below in families:
-                neighbors = neighbors + 1
-                surrounding.append(below)
-                for i in range(len(families)):
-                    if below == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            left = chr(cellscr.inch(y, x - 1))
-            if left in families:
-                neighbors = neighbors + 1
-                surrounding.append(left)
-                for i in range(len(families)):
-                    if left == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            right = chr(cellscr.inch(y, x + 1))
-            if right in families:
-                neighbors = neighbors + 1
-                surrounding.append(right)
-                for i in range(len(families)):
-                    if right == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            #newstart
-
-            topright = chr(cellscr.inch(y+1, x+1))
-            if topright in families:
-                neighbors = neighbors + 1
-                surrounding.append(topright)
-                for i in range(len(families)):
-                    if topright == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            bottomright = chr(cellscr.inch(y-1, x+1))
-            if bottomright in families:
-                neighbors = neighbors + 1
-                surrounding.append(bottomright)
-                for i in range(len(families)):
-                    if bottomright == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            topleft = chr(cellscr.inch(y+1, x-1))
-            if topleft in families:
-                neighbors = neighbors + 1
-                surrounding.append(topleft)
-                for i in range(len(families)):
-                    if topleft == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-
-            bottomleft = chr(cellscr.inch(y-1, x-1))
-            if bottomleft in families:
-                neighbors = neighbors + 1
-                surrounding.append(bottomleft)
-                for i in range(len(families)):
-                    if bottomleft == families[i]:
-                        familydict["{0}".format(families[i])] += 1
-            
-            if current_character in families:
+            check(y-1, x) # above
+            check(y+1, x) # below
+            check(y, x-1) # left
+            check(y, x+1) # right
+            check(y-1, x+1) # top right
+            check(y+1, x+1) # bottom right
+            check(y-1, x-1) # top left
+            check(y+1, x-1) # bottom left       
+            if current_character in families: # If the cell at the current coordinate is alive:
                 for i in range(len(families)):
                     if current_character == families[i]:
-                        familydict["{0}".format(families[i])] += 1
+                        familydict["{0}".format(families[i])] += 1 # Assign that family's dictionary value +1 (for population count)
                 if neighbors < 2:
-                    cellscr.addstr(y, x, ' ')
+                    cellscr.addstr(y, x, ' ') # The cell dies :(
                     deathrate = deathrate + 1
-                elif neighbors > 3:
-                    cellscr.addstr(y, x, ' ')
+                if neighbors > 3:
+                    cellscr.addstr(y, x, ' ') # RIP
                     deathrate = deathrate + 1
-            
-            elif current_character == ' ':
-                if neighbors == 3:
-                    cellscr.addstr(y, x, most_frequent(surrounding))
+            elif current_character == ' ': # If the current cell is dead:
+                if neighbors == 3: # AND it has three neighbors:
+                    cellscr.addstr(y, x, most_frequent(surrounding)) # IT'S ALIVE!
                     current_char = cellscr.inch(y, x)
                     for i in range(len(families)):
                         if current_char == families[i]:
-                            familydict["{0}".format(families[i])] += 1
-    #add_random()
-
+                            familydict["{0}".format(families[i])] += 1 # Add new cell to appropriate family's dictionary
     generation = generation + 1
-    if generation%50 == 0:
+    if generation%50 == 0: # Adds all information to the graph if current generation is a multiple of 50
         Gen.append(generation)
         for i in range(len(families)):
             axisdict["{0}axis".format(families[i])].append(familydict["{0}".format(families[i])])
-    
-    infoscreen.addstr(1, 1, ('Generation: ' + str(generation) + '     '))
-    infoscreen.addstr(2, 1, ('Deathrate: ' + str(deathrate) + '     '))
-
+    infoscreen.addstr(1, 1, ("Generation: %s     " % generation)) # 'Generation: #' text
+    infoscreen.addstr(2, 1, ('Deathrate: %s     ' % deathrate)) # 'Deathrate: #' text
     for i in range(len(families)):
-        total += familydict["{0}".format(families[i])]
+        total += familydict["{0}".format(families[i])] # Total is population of all families added together
     for i in range(len(families)):
-        percentdict["{0}_percent".format(i)] = (round((familydict["{0}".format(families[i])] / total)*100, 2))
-        infoscreen.addstr(i + 3, 1, families[i] + ': ' + str(percentdict["{0}_percent".format(i)]) + '%   ')
-        
-    
+        percentdict["{0}_percent".format(i)] = (round((familydict["{0}".format(families[i])] / total)*100, 2)) # Calculates every family's percentage of domination of the board
+        infoscreen.addstr(i + 3, 1, '{}: {}%     '.format(families[i], percentdict["{0}_percent".format(i)])) # Adds percentage value behind family's character
+    # Refresh all screens and windows
     stdscr.refresh()
     cellscr.refresh()
     infoscreen.refresh()
-    #time.sleep(0.1)
-
+# Finish creating and show the graph and program termination
 for i in range(len(families)):
     plt.plot(Gen, axisdict["{0}axis".format(families[i])], label = families[i])
 plt.legend()
 plt.xlabel('Generation')
 plt.ylabel('Population')
 plt.show()
-
-
+# Terminate the program
 curses.nocbreak()
 stdscr.keypad(False)
 curses.echo()
-
 curses.endwin()
-
-print("Generations passed: " + str(generation))
-
-
-# Good chars for families: █ ░
-
+# Once the program has ended, and we're back at the console, display
+# how many generations passed during runtime.
+print("Generations passed: %s" % generation)
 
