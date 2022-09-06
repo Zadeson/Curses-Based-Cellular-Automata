@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./examples/component/homescreen.gif" alt="Demo image"></img>
+  <img src="assets/homescreen.gif" alt="Demo image"></img>
   <br/>
   <a href="#"><img src="https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white"></img></a>
   <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/arthursonzogni/FTXUI?color=black"></img></a>
