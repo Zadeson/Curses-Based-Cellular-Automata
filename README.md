@@ -52,8 +52,8 @@ This has not been tested on every operating system, but has worked with:
 
 ## Contributers
 
-<a href="https://github.com/ArthurSonzogni/FTXUI/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=ArthurSonzogni/FTXUI" />
+<a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=Zadeson/Curses-Based-Cellular-Automata" />
 </a>
 
 ## 🤝 Support
