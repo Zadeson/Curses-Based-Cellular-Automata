@@ -37,9 +37,12 @@ At the start of the program, every gene/character is randomly created in a set a
   - matplotlib
   - numpy
 
-## Future Updates
+## Todo
 
 - [ ] More interactivity, possibly including a game-like function involving gambling.
+- [ ] Making the app more visually appealing
+- [ ] Adding settings for the user to tweak to their preferences
+- [ ] DNA for individual cells?
 
 ## Author
 
