@@ -2,7 +2,7 @@
   <img src="assets/homescreen.gif" alt="Demo image" width="867" height="371"></img>
   <br/>
   <a href="#"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg"></img></a>
-  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/badge/License-CC_BY--NC--SA_4.0-lightgrey.svg"></img></a>
+  <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/"><img src="https://img.shields.io/github/license/Zadeson/Curses-Based-Cellular-Automata?color=blue"></img></a>
   <a href="#"><img src="https://img.shields.io/github/repo-size/Zadeson/Curses-Based-Cellular-Automata"></img></a>
   <a href="#"><img src="https://img.shields.io/github/commit-activity/y/Zadeson/Curses-Based-Cellular-Automata"></img></a>
 
