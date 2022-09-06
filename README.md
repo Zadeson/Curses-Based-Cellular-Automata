@@ -10,7 +10,7 @@
 
 ## Screenshots
 
-![Prompt](assets/prompt.PNG "Prompts for characters included in gene pool, and gene seperation.")
+![Prompt](assets/prompt.png "Prompts for characters included in gene pool, and gene seperation.")
 
 ![A Running Simulation](assets/cellular2.PNG "A Running Simulation")
 
