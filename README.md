@@ -1,13 +1,9 @@
 <p align="center">
-  <img src="assets/homescreen.gif" alt="Demo image"></img>
+  <img src="assets/homescreen.gif" alt="Demo image" width="867" height="371"></img>
   <br/>
-  <a href="#"><img src="https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white"></img></a>
+  <a href="#"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg"></img></a>
   <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/arthursonzogni/FTXUI?color=black"></img></a>
-  <a href="#"><img src="https://img.shields.io/github/stars/ArthurSonzogni/FTXUI"></img></a>
-  <a href="#"><img src="https://img.shields.io/github/forks/ArthurSonzogni/FTXUI"></img></a>
-  <a href="#"><img src="https://img.shields.io/github/repo-size/ArthurSonzogni/FTXUI"></img></a>
-  <a href="https://github.com/ArthurSonzogni/FTXUI/issues"><img src="https://img.shields.io/github/issues/ArthurSonzogni/FTXUI"></img></a>
-  <a href="https://github.com/ArthurSonzogni/FTXUI/graphs/contributors"><img src="https://img.shields.io/github/contributors/arthursonzogni/FTXUI?color=blue"></img></a>
+  <a href="#"><img src="https://img.shields.io/github/repo-size/Zadeson/Curses-Based-Cellular-Automata"></img></a>
   <a href="https://codecov.io/gh/ArthurSonzogni/FTXUI">
     <img src="https://codecov.io/gh/ArthurSonzogni/FTXUI/branch/master/graph/badge.svg?token=C41FdRpNVA"/>
   </a>
