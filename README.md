@@ -8,11 +8,9 @@
 
   
   <br/>
-  <a href="https://arthursonzogni.github.io/FTXUI/">Documentation</a> ·
-  <a href="https://github.com/ArthurSonzogni/FTXUI/issues">Report a Bug</a> ·
-  <a href="https://arthursonzogni.github.io/FTXUI/examples.html">Examples</a> .
-  <a href="https://github.com/ArthurSonzogni/FTXUI/issues">Request Feature</a> ·
-  <a href="https://github.com/ArthurSonzogni/FTXUI/pulls">Send a Pull Request</a>
+  <a href="https://github.com/Zadeson/Curses-Based-Cellular_automata/issues">Report a Bug</a> ·
+  <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/issues">Request Feature</a> ·
+  <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/pulls">Send a Pull Request</a>
 
 </p>
 
