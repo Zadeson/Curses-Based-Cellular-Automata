@@ -55,9 +55,3 @@ This has not been tested on every operating system, but has worked with:
 <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Zadeson/Curses-Based-Cellular-Automata" />
 </a>
-
-## 🤝 Support
-
-Contributions, issues, and feature requests are welcome!
-
-Give a ⭐️ if you like this project!
