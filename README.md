@@ -12,7 +12,7 @@
 
 ![Prompt](assets/prompt.png "Prompts for characters included in gene pool, and gene seperation.")
 
-![A Running Simulation](assets/cellular2.PNG "A Running Simulation")
+![A Running Simulation](assets/cellscr.png "A Running Simulation")
 
 ![Graph After Simulation](assets/cellular3.PNG)
 
