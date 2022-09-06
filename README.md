@@ -8,12 +8,6 @@
 
 - [Bugs](https://github.com/Zadeson/Curses-Based-Cellular-Automata/issues "Issues Page")
 
-## Screenshots
-
-![Prompt](assets/prompt.png "Prompts for characters included in gene pool, and gene seperation.")
-
-![A Running Simulation](assets/cellscr.png "A Running Simulation")
-
 ## About
 
 At program startup, the app prompts the user to enter every character they want included in the 'gene pool'.
@@ -45,6 +39,12 @@ Watch as your chosen characters battle each other until only one family survives
 - [ ] Making the app more visually appealing
 - [ ] Adding settings for the user to tweak to their preferences
 - [ ] DNA for individual cells?
+
+## Screenshots
+
+![Prompt](assets/prompt.png "Prompts for characters included in gene pool, and gene seperation.")
+
+![A Running Simulation](assets/cellscr.png "A Running Simulation")
 
 ## Author
 
