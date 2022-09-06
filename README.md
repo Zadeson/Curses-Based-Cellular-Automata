@@ -14,9 +14,7 @@
 
 ![A Running Simulation](assets/cellscr.png "A Running Simulation")
 
-![Graph After Simulation](assets/cellular3.PNG)
-
-## Interactivity
+## About
 
 At program startup, the app prompts the user to enter every character they want included in the 'gene pool'.
 
@@ -28,6 +26,10 @@ Every character included in this input will automatically be shown in the table,
 ### `would you like to seperate each family? y/n`
 
 At the start of the program, every gene/character is randomly created in a set area, depending on the input of this prompt. If the user answers 'y', every gene will be evenly distributed along the x axis of the screen, with the same y value. If the user answers with 'n', every gene will be randomly created in a small box at the center of the screen. 
+
+### `Fight to the Death`
+
+Watch as your chosen characters battle each other until only one family survives!
 
 ## Built With
 
