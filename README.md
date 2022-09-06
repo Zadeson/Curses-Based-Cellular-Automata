@@ -1,3 +1,28 @@
+<p align="center">
+  <img src="./examples/component/homescreen.gif" alt="Demo image"></img>
+  <br/>
+  <a href="#"><img src="https://img.shields.io/badge/c++-%2300599C.svg?style=flat&logo=c%2B%2B&logoColor=white"></img></a>
+  <a href="http://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/arthursonzogni/FTXUI?color=black"></img></a>
+  <a href="#"><img src="https://img.shields.io/github/stars/ArthurSonzogni/FTXUI"></img></a>
+  <a href="#"><img src="https://img.shields.io/github/forks/ArthurSonzogni/FTXUI"></img></a>
+  <a href="#"><img src="https://img.shields.io/github/repo-size/ArthurSonzogni/FTXUI"></img></a>
+  <a href="https://github.com/ArthurSonzogni/FTXUI/issues"><img src="https://img.shields.io/github/issues/ArthurSonzogni/FTXUI"></img></a>
+  <a href="https://github.com/ArthurSonzogni/FTXUI/graphs/contributors"><img src="https://img.shields.io/github/contributors/arthursonzogni/FTXUI?color=blue"></img></a>
+  <a href="https://codecov.io/gh/ArthurSonzogni/FTXUI">
+    <img src="https://codecov.io/gh/ArthurSonzogni/FTXUI/branch/master/graph/badge.svg?token=C41FdRpNVA"/>
+  </a>
+
+  
+  <br/>
+  <a href="https://arthursonzogni.github.io/FTXUI/">Documentation</a> ·
+  <a href="https://github.com/ArthurSonzogni/FTXUI/issues">Report a Bug</a> ·
+  <a href="https://arthursonzogni.github.io/FTXUI/examples.html">Examples</a> .
+  <a href="https://github.com/ArthurSonzogni/FTXUI/issues">Request Feature</a> ·
+  <a href="https://github.com/ArthurSonzogni/FTXUI/pulls">Send a Pull Request</a>
+
+</p>
+
+
 <h1 align="center">Curses Based Cellular Automata</h1>
 
 <p align="center">Life simulation using ASCII characters in Linux Terminal or Windows Command Prompt.</p>
