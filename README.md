@@ -1,25 +1,13 @@
-<p align="center">
-  <img src="assets/homescreen.gif" alt="Demo image" width="867" height="371"></img>
-  <br/>
-  <a href="#"><img src="https://img.shields.io/badge/Made%20with-Python-1f425f.svg"></img></a>
-  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/github/license/Zadeson/Curses-Based-Cellular-Automata?color=blue"></img></a>
-  <a href="#"><img src="https://img.shields.io/github/repo-size/Zadeson/Curses-Based-Cellular-Automata"></img></a>
-  <a href="#"><img src="https://img.shields.io/github/commit-activity/y/Zadeson/Curses-Based-Cellular-Automata"></img></a>
+# Curses Based Cellular Automata
 
-  
-  <br/>
-  <a href="https://github.com/Zadeson/Curses-Based-Cellular_automata/issues">Report a Bug</a> ·
-  <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/issues">Request Feature</a> ·
-  <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/pulls">Send a Pull Request</a>
+![Demo image](assets/homescreen.gif)
 
-</p>
+[![Made with Python](https://img.shields.io/badge/Made%20with-Python-1f425f.svg)](https://www.python.org/)
+[![License: MIT](https://img.shields.io/github/license/Zadeson/Curses-Based-Cellular-Automata?color=blue)](https://opensource.org/licenses/MIT)
+[![Repo Size](https://img.shields.io/github/repo-size/Zadeson/Curses-Based-Cellular-Automata)](https://github.com/Zadeson/Curses-Based-Cellular-Automata)
+[![Commit Activity](https://img.shields.io/github/commit-activity/y/Zadeson/Curses-Based-Cellular-Automata)](https://github.com/Zadeson/Curses-Based-Cellular-Automata)
 
-
-## Curses Based Cellular Automata
-
-<i>Life Simulation using Ascii Characters</i>
-
-Available on Windows command prompt and Linux terminal!
+Life Simulation using Ascii Characters. Available on Windows command prompt and Linux terminal!
 
 ## Features
 
@@ -48,8 +36,18 @@ This has not been tested on every operating system, but has worked with:
 - [ ] Adding settings for the user to tweak to their preferences
 - [ ] DNA for individual cells?
 
+## Getting Started
+
+1. Clone the repo: `git clone https://github.com/Zadeson/Curses-Based-Cellular-Automata.git`
+2. Install required packages: `pip install -r requirements.txt`
+3. Run the app: `python main.py`
+
 ## Contributers
 
 <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Zadeson/Curses-Based-Cellular-Automata" />
 </a>
+
+## Bugs and Feature Requests
+
+Found a bug or want to request a feature? Please open an issue on the [issue tracker](https://github.com/Zadeson/Curses-Based-Cellular-Automata/issues).
