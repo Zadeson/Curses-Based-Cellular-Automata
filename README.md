@@ -7,13 +7,17 @@
 [![Repo Size](https://img.shields.io/github/repo-size/Zadeson/Curses-Based-Cellular-Automata)](https://github.com/Zadeson/Curses-Based-Cellular-Automata)
 [![Commit Activity](https://img.shields.io/github/commit-activity/y/Zadeson/Curses-Based-Cellular-Automata)](https://github.com/Zadeson/Curses-Based-Cellular-Automata)
 
-Life Simulation using Ascii Characters. Available on Windows command prompt and Linux terminal!
+Immerse yourself in an intriguing cellular automata world that simulates life using ASCII characters. Now featuring real-time commentary, leaderboard, and more!
 
 ## Features
 
-* Customizable characters
-* Clean UI
-* Detailed "match" information
+- Customizable characters
+- Real-time generation and death rate tracking
+- Dynamic commentary feed
+- Leaderboard stats
+- In-game drawing and erasing
+- Clean and divided UI
+- Pause and resume functionality
 
 ## Accepted Operating Systems
 
@@ -28,13 +32,16 @@ This has not been tested on every operating system, but has worked with:
   - time, random, os
   - matplotlib
   - numpy
+  - questionary
+  - collections, datetime, textwrap
 
 ## Todo
 
-- [ ] More interactivity, possibly including a game-like function involving gambling.
-- [ ] Making the app more visually appealing
-- [ ] Adding settings for the user to tweak to their preferences
-- [ ] DNA for individual cells?
+- [ ] Optimize performance for larger grids
+- [ ] Add sound effects for events like extinction and domination
+- [ ] Implement save and load functionality for game states
+- [ ] Add more cellular automata rules and behaviors
+- [ ] Improve UI aesthetics and responsiveness
 
 ## Getting Started
 
@@ -42,7 +49,7 @@ This has not been tested on every operating system, but has worked with:
 2. Install required packages: `pip install -r requirements.txt`
 3. Run the app: `python main.py`
 
-## Contributers
+## Contributors
 
 <a href="https://github.com/Zadeson/Curses-Based-Cellular-Automata/graphs/contributors">
   <img src="https://contrib.rocks/image?repo=Zadeson/Curses-Based-Cellular-Automata" />
@@ -51,3 +58,4 @@ This has not been tested on every operating system, but has worked with:
 ## Bugs and Feature Requests
 
 Found a bug or want to request a feature? Please open an issue on the [issue tracker](https://github.com/Zadeson/Curses-Based-Cellular-Automata/issues).
+
